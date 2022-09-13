@@ -8,9 +8,12 @@ const Home = () => {
     { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
   ])
 
+  const mariosBlogs = blogs.filter(blog => blog.author === 'mario');
+
   return (
     <div className="home">
       <BlogList blogs={blogs} title='All Blogs'/>
+      <BlogList blogs={mariosBlogs} title='Mario blogs:'/>      
     </div>    
   );
 }
