@@ -1,26 +1,15 @@
 import './App.css';
+import Navbar from './Navbar'
+import Home from './Home'
 
 function App() {
 
-  const title = 'Welcome to the new blog';
-  const likes = 50;
-  // const person = {name: 'Pavle', age: 32}
-  const link = 'https://www.google.com'
-
   return (
     <div className="App">
-      <h1>{title}</h1>
-      <p>Likes: {likes} times</p>
-
-      {/* <p>{person}</p> */}
-
-      <p>{ 10 }</p>
-      <p>{'Hello ninjas'}</p>
-      <p>[1,2,3,4,5]</p>
-      <p>{Math.random() * 10}</p>
-
-      <a href={link}>Google site</a>
-
+      <Navbar />
+      <div className="content">
+        <Home />   
+      </div>
     </div>
   );
 }
